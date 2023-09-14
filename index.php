@@ -111,38 +111,6 @@
     </section>
     <!--END HOME-->
 
-    <!-- CLIENT LOGO -->
-    <section class="section-sm bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="client-images my-3 my-md-0">
-                        <img src="images/clients/1.png" alt="logo-img" class="mx-auto img-fluid d-block">
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="client-images my-3 my-md-0">
-                        <img src="images/clients/2.png" alt="logo-img" class="mx-auto img-fluid d-block">
-                    </div>
-                </div>
-
-                <div class="col-md-3 ">
-                    <div class="client-images my-3 my-md-0">
-                        <img src="images/clients/3.png" alt="logo-img" class="mx-auto img-fluid d-block">
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="client-images my-3 my-md-0">
-                        <img src="images/clients/4.png" alt="logo-img" class="mx-auto img-fluid d-block">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- END CLIENT LOGO -->
-
     <!--START FEATURES-->
     <section class="section" id="features">
         <div class="container">
