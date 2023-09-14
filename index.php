@@ -1,10 +1,13 @@
+<?php
+    require_once('./lib/display.php');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8" />
-    <title>Hiric</title>
+    <title>NaturaTech Solutions Inc.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Premium Bootstrap 5 Landing Page Template" />
     <meta name="keywords" content="bootstrap 5, premium, marketing, multipurpose" />
@@ -31,7 +34,7 @@
         <div class="container">
             <!-- LOGO -->
             <a class="navbar-brand logo text-uppercase" href="index.html">
-                <i class="mdi mdi-alien"></i>Hiric
+                <i class="mdi mdi-alien"></i>NaturaTech Solutions Inc.
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
@@ -54,25 +57,9 @@
                         <a data-scroll href="#about" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a data-scroll href="#pricing" class="nav-link">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a data-scroll href="#blog" class="nav-link">Blog</a>
-                    </li>
-                    <li class="nav-item">
                         <a data-scroll href="#contact" class="nav-link">Contact</a>
                     </li>
-
                 </ul>
-                <div class="nav-button ms-auto">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <button type="button"
-                                class="btn btn-primary navbar-btn btn-rounded waves-effect waves-light">Try it
-                                Free</button>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
     </nav>
@@ -88,23 +75,6 @@
                     <h1 class="home-title">We love make things amazing and simple</h1>
                     <p class="pt-3 home-desc mx-auto">Maecenas class semper class semper sollicitudin lectus lorem
                         iaculis imperdiet aliquam vehicula tempor auctor curabitur pede aenean ornare.</p>
-                    <p class="play-shadow mt-4" data-bs-toggle="modal" data-bs-target="#watchvideomodal"><a
-                            href="javascript: void(0);" class="play-btn video-play-icon"><i
-                                class="mdi mdi-play text-center"></i></a></p>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="watchvideomodal"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-body p-0" style="margin-bottom: -8px;">
-                                    <video id="VisaChipCardVideo" class="video-box" controls  width="800" >
-                                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" >
-                                        <!--Browser does not support <video> tag -->
-                                    </video>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -125,8 +95,6 @@
                             <li class="">The most important ingredient of successful website.</li>
                             <li class="">Submit Your Orgnization.</li>
                         </ul>
-                        <a href="#" class="btn btn-primary mt-4 waves-effect waves-light">Learn More <i
-                                class="mdi mdi-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-7 order-1 order-lg-2">
@@ -146,9 +114,6 @@
                 <div class="col-lg-8 offset-lg-2">
                     <h1 class="section-title text-center">Our Services</h1>
                     <div class="section-title-border mt-3"></div>
-                    <p class="section-subtitle text-muted text-center pt-4 font-secondary">We craft digital, graphic and
-                        dimensional thinking, to create category leading brand experiences that have meaning and add a
-                        value for our clients.</p>
                 </div>
             </div>
             <div class="row mt-5">
@@ -268,23 +233,7 @@
             </div>
         </div>
     </section>
-    <!--START SERVICES-->
-
-    <!--START WEBSITE-DESCRIPTION-->
-    <section class="section bg-web-desc">
-        <div class="bg-overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="text-white">Build your dream website today</h2>
-                    <p class="pt-3 home-desc mx-auto">But nothing the copy said could convince her and so it didn’t take
-                        long until a few insidious Copy Writers ambushed her.</p>
-                    <a href="#" class="btn btn-light mt-5 waves-effect waves-light">View Plan & Pricing</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--END WEBSITE-DESCRIPTION-->
+    <!--START SERVICES--> 
 
     <!--START ABOUT-US-->
     <section class="section" id="about">
@@ -354,231 +303,6 @@
         </div>
     </section>
     <!--END ABOUT-US-->
-
-    <!--START PRICING-->
-    <section class="section bg-light" id="pricing">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <h1 class="section-title text-center">Our Pricing</h1>
-                    <div class="section-title-border mt-3"></div>
-                    <p class="section-subtitle font-secondary text-muted text-center pt-4">Call to action pricing table
-                        is really crucial to your for your business website. Make your bids stand-out with amazing
-                        options.</p>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-lg-4">
-                    <div class="text-center pricing-box">
-                        <h4 class="text-uppercase">Economy</h4>
-                        <h1>$9.90</h1>
-                        <h6 class="text-uppercase text-muted">Billing Per Month</h6>
-                        <div class="plan-features mt-5">
-                            <p>Bandwidth: <b class="text-primary">1GB</b></p>
-                            <p>Onlinespace: <b class="text-primary">50MB</b></p>
-                            <p>Support: <b class="text-primary">No</b></p>
-                            <p><b class="text-primary">1</b> Domain</p>
-                            <p><b class="text-primary">No</b> Hidden Fees</p>
-                        </div>
-                        <a href="#" class="btn btn-primary waves-effect waves-light mt-5">Join Now</a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="text-center pricing-box price-active">
-                        <div class="ribbon-box"><span>Popular</span></div>
-                        <h4 class="text-uppercase">Deluxe</h4>
-                        <h1>$19.90</h1>
-                        <h6 class="text-uppercase text-muted">Billing Per Month</h6>
-                        <div class="plan-features mt-5">
-                            <p>Bandwidth: <b class="text-primary">10GB</b></p>
-                            <p>Onlinespace: <b class="text-primary">500MB</b></p>
-                            <p>Support: <b class="text-primary">Yes</b></p>
-                            <p><b class="text-primary">10</b> Domain</p>
-                            <p><b class="text-primary">No</b> Hidden Fees</p>
-                        </div>
-                        <a href="#" class="btn btn-primary waves-effect waves-light mt-5">Join Now</a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="text-center pricing-box">
-                        <h4 class="text-uppercase">Ultimate</h4>
-                        <h1>$29.90</h1>
-                        <h6 class="text-uppercase text-muted">Billing Per Month</h6>
-                        <div class="plan-features mt-5">
-                            <p>Bandwidth: <b class="text-primary">100GB</b></p>
-                            <p>Onlinespace: <b class="text-primary">2 GB</b></p>
-                            <p>Support: <b class="text-primary">Yes</b></p>
-                            <p><b class="text-primary">Unlimited</b> Domain</p>
-                            <p><b class="text-primary">No</b> Hidden Fees</p>
-                        </div>
-                        <a href="#" class="btn btn-primary waves-effect waves-light mt-5">Join Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--ENd PRICING-->
-
-    <!--START TESTIMONIAL-->
-    <section class="section" id="testi">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <h1 class="section-title text-center">What they've said</h1>
-                    <div class="section-title-border mt-3"></div>
-                    <p class="section-subtitle text-muted text-center font-secondary pt-4">The Big Oxmox advised her not
-                        to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli.
-                    </p>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-lg-4">
-                    <div class="testimonial-box mt-4">
-                        <div class="testimonial-decs p-4">
-                            <div class="testi-icon">
-                                <i class="mdi mdi-format-quote-open display-1"></i>
-                            </div>
-                            <img src="images/testimonials/user-1.jpg" alt=""
-                                class="img-fluid mx-auto d-block img-thumbnail rounded-circle mb-4">
-                            <div class="p-1">
-                                <h5 class="text-center text-uppercase mb-3">Dennis Williams - <span
-                                        class="text-muted text-capitalize">Charleston</span></h5>
-                                <p class="text-muted text-center mb-0">“I feel confident imposing change on myself. It's
-                                    a lot more fun progressing than
-                                    looking back. That's why I ultricies enim at malesuada nibh diam on tortor neaded to
-                                    throw curve balls.” </p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="testimonial-box mt-4">
-                        <div class="testimonial-decs p-4">
-                            <div class="testi-icon">
-                                <i class="mdi mdi-format-quote-open display-1"></i>
-                            </div>
-                            <img src="images/testimonials/user-2.jpg" alt=""
-                                class="img-fluid mx-auto d-block img-thumbnail rounded-circle mb-4">
-                            <div class="p-1">
-                                <h5 class="text-center text-uppercase mb-3">Laurie Bell - <span
-                                        class="text-muted text-capitalize">Worcester</span></h5>
-                                <p class="text-muted text-center mb-0">“Our task must be to free ourselves by widening
-                                    our circle of compassion to embrace
-                                    all living creatures and the whole of quis consectetur nunc sit amet semper justo.
-                                    nature and its beauty.” </p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="testimonial-box mt-4">
-                        <div class="testimonial-decs p-4">
-                            <div class="testi-icon">
-                                <i class="mdi mdi-format-quote-open display-1"></i>
-                            </div>
-                            <img src="images/testimonials/user-3.jpg" alt=""
-                                class="img-fluid mx-auto d-block img-thumbnail rounded-circle mb-4">
-                            <div class="p-1">
-                                <h5 class="text-center text-uppercase mb-3">Howard Kelley - <span
-                                        class="text-muted text-capitalize">Lynchburg</span></h5>
-                                <p class="text-muted text-center mb-0">“I've learned that people will forget what you
-                                    said, people will forget what you did,
-                                    but people will never forget how donec in efficitur lectus, nec lobortis metus you
-                                    made them feel.” </p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--END TESTIMONIAL-->
-
-    <!--START GET STARTED-->
-    <section class="section section-lg bg-get-start">
-        <div class="bg-overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2 text-center">
-                    <h1 class="get-started-title text-white">Let's Get Started</h1>
-                    <div class="section-title-border mt-4 bg-white"></div>
-                    <p class="section-subtitle font-secondary text-white text-center pt-4">Far far away, behind the word
-                        mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <a href="#" class="btn btn-light waves-effect mt-4">Get Started <i class="mdi mdi-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--END GET STARTED-->
-
-    <!-- START BLOG -->
-    <section class="section " id="blog">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <h1 class="section-title text-center">Latest News</h1>
-                    <div class="section-title-border mt-3"></div>
-                    <p class="section-subtitle text-muted text-center font-secondary pt-4">Separated they live in
-                        Bookmarksgrove right at the coast of the Semantics, a large language ocean class at a euismod
-                        mus luctus quam.</p>
-                </div>
-            </div>
-
-            <div class="row mt-4">
-                <div class="col-lg-4">
-                    <div class="blog-box mt-4">
-                        <img src="images/blog/img-1.jpg" class="img-fluid rounded" alt="">
-                        <div>
-                            <h5 class="mt-4 text-muted">UI & UX Design</h5>
-                            <h4 class="mt-3"><a href="" class="blog-title"> Doing a cross country road trip </a></h4>
-                            <p class="text-muted">She packed her seven versalia, put her initial into the belt and made
-                                herself on the way..</p>
-                            <div class="mt-3">
-                                <a href="" class="read-btn">Read More <i class="mdi mdi-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="blog-box mt-4">
-                        <img src="images/blog/img-2.jpg" class="img-fluid rounded" alt="">
-                        <div>
-                            <h5 class="mt-4 text-muted">Digital Marketing</h5>
-                            <h4 class="mt-3"><a href="" class="blog-title">New exhibition at our Museum</a></h4>
-                            <p class="text-muted">Pityful a rethoric question ran over her cheek, then she continued her
-                                way.</p>
-                            <div class="mt-3">
-                                <a href="" class="read-btn">Read More <i class="mdi mdi-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="blog-box mt-4">
-                        <img src="images/blog/img-3.jpg" class="img-fluid rounded" alt="">
-                        <div>
-                            <h5 class="mt-4 text-muted">Travelling</h5>
-                            <h4 class="mt-3"><a href="" class="blog-title">Why are so many people..</a></h4>
-                            <p class="text-muted">Far far away, behind the word mountains, far from the countries
-                                Vokalia and Consonantia.</p>
-                            <div class="mt-3">
-                                <a href="" class="read-btn">Read More <i class="mdi mdi-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-    <!-- END BLOG -->
 
     <!-- CONTACT FORM START-->
     <section class="section " id="contact">
