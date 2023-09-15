@@ -232,12 +232,8 @@ require_once('./lib/display.php');
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
                     <div class="about-title mx-auto text-center">
-                        <h2>A Digital web studio creating stunning &amp; Engaging online
-                            Experiences </h2>
-                        <p class="text-muted pt-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                            commodo ligula eget dolor.
-                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                            ridiculus mus donec various versions have evolved quam felis.</p>
+                        <h2><?= displayMissionStatement(); ?></h2>
+                        <p class="text-muted pt-4"><?= displayOverview(); ?></p>
                     </div>
                 </div>
             </div>
