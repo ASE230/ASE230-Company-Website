@@ -1,5 +1,7 @@
 <?php
-require_once('./lib/display.php');
+    require_once('./lib/display.php');
+    $teamMembersHTML = generateTeamMembersHTML('./data/teammembers.json');
+    $servicesHTML = generateServicesHTML('./data/prodsandservs.json');
 ?>
 
 <!DOCTYPE html>
@@ -109,118 +111,7 @@ require_once('./lib/display.php');
                 </div>
             </div>
             <div class="row mt-5">
-                <div class="col-lg-4 mt-4">
-                    <div class="services-box">
-                        <div class="d-flex">
-                            <i class="pe-7s-diamond text-primary"></i>
-                            <div class="ms-4">
-                                <h4>Digital Design</h4>
-                                <p class="pt-2 text-muted">Some quick example text to build on the card title and make
-                                    up the bulk of the card's content. Moltin gives platform.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="services-box">
-                        <div class="d-flex">
-                            <i class="pe-7s-display2 text-primary"></i>
-                            <div class="ms-4">
-                                <h4>Unlimited Colors</h4>
-                                <p class="pt-2 text-muted">Credibly brand standards compliant users without extensible
-                                    services. Anibh euismod tincidunt laoreet Ipsum passage.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="services-box">
-                        <div class="d-flex">
-                            <i class="pe-7s-piggy text-primary"></i>
-                            <div class="ms-4">
-                                <h4>Strategy Solutions</h4>
-                                <p class="pt-2 text-muted">Separated they live in Bookmarksgrove right at the coast of
-                                    the Semantics, and large language ocean neary regelia.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 mt-4">
-                    <div class="services-box">
-                        <div class="d-flex">
-                            <i class="pe-7s-science text-primary"></i>
-                            <div class="ms-4">
-                                <h4>Awesome Support</h4>
-                                <p class="pt-2 text-muted">It is a paradisematic country, in which roasted parts of
-                                    sentences fly into your mouth leave for the far World.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="services-box">
-                        <div class="d-flex">
-                            <i class="pe-7s-news-paper text-primary"></i>
-                            <div class="ms-4">
-                                <h4>Truly Multipurpose</h4>
-                                <p class="pt-2 text-muted">Even the all-powerful Pointing has no control about the blind
-                                    texts it is an almost unorthographic.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="services-box">
-                        <div class="d-flex">
-                            <i class="pe-7s-plane text-primary"></i>
-                            <div class="ms-4">
-                                <h4>Easy to customize</h4>
-                                <p class="pt-2 text-muted">Question Marks and devious Semikoli, but the Little Blind
-                                    Text didn’t listen. She packed her seven versalia.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 mt-4">
-                    <div class="services-box">
-                        <div class="d-flex">
-                            <i class="pe-7s-arc text-primary"></i>
-                            <div class="ms-4">
-                                <h4>Pixel Perfect Design</h4>
-                                <p class="pt-2 text-muted">There are many variations of passages of Lorem Ipsum
-                                    available, but the majority have suffered alteration.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="services-box">
-                        <div class="d-flex">
-                            <i class="pe-7s-tools text-primary"></i>
-                            <div class="ms-4">
-                                <h4>Perfect Toolbox</h4>
-                                <p class="pt-2 text-muted">Hampden-Sydney College in Virginia, looked up one of the more
-                                    obscure Latin words, consectetur.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="services-box">
-                        <div class="d-flex">
-                            <i class="pe-7s-timer text-primary"></i>
-                            <div class="ms-4">
-                                <h4>Awesome Design</h4>
-                                <p class="pt-2 text-muted">All the Lorem Ipsum generators on the Internet tend to repeat
-                                    predefined chunks as necessary.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php echo $servicesHTML; ?>
             </div>
         </div>
     </section>
@@ -238,54 +129,7 @@ require_once('./lib/display.php');
                 </div>
             </div>
             <div class="row mt-5">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="team-box text-center">
-                        <div class="team-wrapper">
-                            <div class="team-member">
-                                <img alt="" src="images/team/img-1.jpg" class="img-fluid rounded">
-                            </div>
-                        </div>
-                        <h4 class="team-name">Frank Johnson</h4>
-                        <p class="text-uppercase team-designation">CEO</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6">
-                    <div class="team-box text-center">
-                        <div class="team-wrapper">
-                            <div class="team-member">
-                                <img alt="" src="images/team/img-2.jpg" class="img-fluid rounded">
-                            </div>
-                        </div>
-                        <h4 class="team-name">Elaine Stclair</h4>
-                        <p class="text-uppercase team-designation">Designer</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6">
-                    <div class="team-box text-center">
-                        <div class="team-wrapper">
-                            <div class="team-member">
-                                <img alt="" src="images/team/img-3.jpg" class="img-fluid rounded">
-                            </div>
-                        </div>
-                        <h4 class="team-name">Wanda Arthur</h4>
-                        <p class="text-uppercase team-designation">Developer</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6">
-                    <div class="team-box text-center">
-                        <div class="team-wrapper">
-                            <div class="team-member">
-                                <img alt="" src="images/team/img-4.jpg" class="img-fluid rounded">
-                            </div>
-                        </div>
-                        <h4 class="team-name">Joshua Stemple</h4>
-                        <p class="text-uppercase team-designation">Manager</p>
-                    </div>
-                </div>
-
+                <?php echo $teamMembersHTML; ?>
             </div>
         </div>
     </section>
