@@ -1,5 +1,5 @@
 # ASE230-Company-Website
-Repo for Assignment 4, due 9/18
+Repo for Assignment 6, due 10/2
 
 Team:
 
