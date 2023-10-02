@@ -33,7 +33,7 @@
       $awards[$id][1] = $description;
     }
 
-    $writeCSV($filePath, $awards);
+    writeCSV($filePath, $awards);
   }
 
   function createAward($year, $description) {

@@ -25,9 +25,9 @@
 <body>
   <form method="POST" action="edit.php?id=<?= $id ?>">
     <label>Year</label>
-    <input type="number" id="year" value="<?= $award[0] ?>" /> <br />
+    <input type="number" name="year" value="<?= $award[0] ?>" /> <br />
     <label>Description</label><br />
-    <textarea id="description" cols="96" rows="4"><?= $award[1] ?></textarea><br />
+    <textarea name="description" cols="96" rows="4"><?= $award[1] ?></textarea><br />
     <button type="submit">Save</button>
     <a href="detail.php?id=<?= $id ?>">Cancel</a>
   </form>
