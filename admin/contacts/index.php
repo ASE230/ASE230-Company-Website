@@ -24,7 +24,7 @@ $contacts = getAllContacts('../../data/contacts.json');
             <?php foreach ($contacts as $contact) { ?>
                 <tr>
                     <td>
-                        <a href="detail.php?name=<?= urlencode($contact['name']); ?>">
+                        <a href="detail.php?counter=<?= urlencode($contact['counter']); ?>">
                             Details
                         </a>
                     </td>
