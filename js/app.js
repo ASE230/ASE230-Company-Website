@@ -99,7 +99,7 @@ function validateForm() {
             document.forms["myForm"]["comments"].value = "";
         }
     };
-    xhttp.open("POST", "php/contact.php", true);
+    xhttp.open("POST", "admin/contacts/contacts.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("name=" + name + "&email=" + email + "&subject=" + subject + "&comments=" + comments);
     return false;

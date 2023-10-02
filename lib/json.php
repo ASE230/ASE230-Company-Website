@@ -1,5 +1,56 @@
 <?php 
 
+function readJSON($filepath) {
+    if(file_exists($filepath)) {
+        $jsonString = file_get_contents($filepath);
+        if ($jsonString !== false) {
+            $data = json_decode($jsonString, true);
+            if ($data !== null) {
+                return $data;
+            } else {
+                // Handle JSON decoding error
+                return false;
+            }
+        } else {
+            // Handle file read error
+            return false;
+        }
+    } else {
+        // Handle file not found error
+        return false;
+    }
+}
+
+function writeJSON($filepath, $data) {
+    // Check if the file exists
+    if (file_exists($filepath)) {
+        // Read the existing JSON data from the file
+        $jsonContent = file_get_contents($filepath);
+        $existingData = json_decode($jsonContent, true);
+    } else {
+        // If the file doesn't exist, start with an empty array
+        $existingData = [];
+    }
+
+    // Append the new data to the existing data array
+    $existingData[] = $data;
+
+    // Encode the combined data as JSON
+    $jsonString = json_encode($existingData, JSON_PRETTY_PRINT);
+
+    if ($jsonString !== false) {
+        if (file_put_contents($filepath, $jsonString) !== false) {
+            return true;
+        } else {
+            // Handle file write error
+            return false;
+        }
+    } else {
+        // Handle JSON encoding error
+        return false;
+    }
+}
+
 function generateTeamMembersHTML($jsonFilePath) {
     $html = '';
 
