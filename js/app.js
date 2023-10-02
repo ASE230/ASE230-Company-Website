@@ -61,7 +61,12 @@ function setColor(theme) {
 };
 
 // Contact Form
+
+let requestCounter = localStorage.getItem('requestCounter') || 0;
+
 function validateForm() {
+    requestCounter++;
+    localStorage.setItem('requestCounter', requestCounter);
     var name = document.forms["myForm"]["name"].value;
     var email = document.forms["myForm"]["email"].value;
     var subject = document.forms["myForm"]["subject"].value;
@@ -101,7 +106,7 @@ function validateForm() {
     };
     xhttp.open("POST", "admin/contacts/contacts.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("name=" + name + "&email=" + email + "&subject=" + subject + "&comments=" + comments);
+    xhttp.send("name=" + name + "&email=" + email + "&subject=" + subject + "&comments=" + comments + "&counter=" + requestCounter);
     return false;
 }
 

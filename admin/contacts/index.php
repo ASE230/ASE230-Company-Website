@@ -2,7 +2,7 @@
 
 require_once('contacts.php');
 
-$contacts = getAllProducts('../../data/contacts.json');
+$contacts = getAllContacts('../../data/contacts.json');
 
 ?>
 
@@ -18,26 +18,19 @@ $contacts = getAllProducts('../../data/contacts.json');
                 <th>Name</th>
                 <th>Email</th>
                 <th>Subject</th>
-                <th>Comments</th>
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($products as $name => $info) { ?>
+            <?php foreach ($contacts as $contact) { ?>
                 <tr>
                     <td>
-                        <a href="detail.php?name=<?= urlencode($name); ?>">
+                        <a href="detail.php?name=<?= urlencode($contact['name']); ?>">
                             Details
                         </a>
                     </td>
-                    <td><?= $name; ?></td>
-                    <td><?= $info['Description']; ?></td>
-                    <td>
-                        <?php
-                            foreach ($info['Applications'] as $application => $description) {
-                                echo "<strong>$application:</strong> $description<br>";
-                            }
-                        ?>
-                    </td>
+                    <td><?= $contact['name']; ?></td>
+                    <td><?= $contact['email']; ?></td>
+                    <td><?= $contact['subject']; ?></td>
                 </tr>
             <?php } ?>
         </tbody>
