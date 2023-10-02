@@ -10,7 +10,7 @@
       header('Location: index.php');
       exit();
     } else {
-      header('Location: detail.php?id=$id');
+      header('Location: detail.php?id='.$id);
       exit();
     }
   }
