@@ -1,8 +1,12 @@
 <?php
+  ini_set('display_errors', 1);
+  ini_set('display_startup_errors', 1);
+  error_reporting(E_ALL);
+
   require_once('pages.php');
 
-  $missionStatement = getMissionStatement();
-  $overview = getOverview();
+  $pages = getAllPages("../../data/pages.csv");
+  $header = array_shift($pages);
 ?>
 
 <html lang="en">
@@ -10,15 +14,31 @@
   <title>Pages</title>
 </head>
 <body>
-  <h1>Mission Statement</h1>
-  <p><?= $missionStatement; ?></p>
-  <a href="detail.php?id=Mission">View</a>
-  <a href="create.php?id=Mission">Create</a>
-
-
-  <h1>Overview</h1>
-  <p><?= $overview; ?></p>
-  <a href="detail.php?id=Overview">View</a>
-  <a href="create.php?id=Overview">Create</a>
+  <a href="create.php">Create Page</a>
+  <table>
+    <thead>
+      <tr>
+        <th>Action</th>
+        <?php foreach($header as $head) { ?> 
+          <th><?= $head ?></th>
+        <?php } ?>
+      </tr>
+    </thead>
+    <tbody>
+      <?php foreach($pages as $idx => $page) { ?> 
+        <tr>
+          <td>
+            <a href="detail.php?id=<?= $idx; ?>">
+              Details
+            </a>
+          </td>
+          <td>
+            <?= $page[0]; ?>
+          </td>
+          <td></td>
+        </tr>
+      <?php } ?>
+    </tbody>
+  </table>
 </body>
 </html>

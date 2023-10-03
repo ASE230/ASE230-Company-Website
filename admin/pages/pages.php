@@ -1,39 +1,48 @@
 <?php
-  require_once('../../lib/txt.php');
+  require_once('../../lib/csv.php');
 
-  function getMissionStatement($filePath = '../../data/missionstatement.txt') {
-    return readTXT($filePath);
+  function getAllPages($filepath) {
+    return readCSV($filepath);
   }
 
-  function getOverview($filePath = '../../data/overview.txt') {
-    return readTXT($filePath);
+  function getPage($filepath, $name) {
+    $pages = getAllPages($filepath);
+    
+    foreach($pages as $page) {
+      if($page === $name) {
+        return $pages;
+      }
+    }
+
+    return null;
   }
 
-  function createMissionStatement($content) {
-    writeTXT("../../data/missionstatement.txt", $content);
+  function updatePage($id, $content) {
+    $filePath = "../../data/pages.csv";
+    $pages = readCSV($filePath);
+
+    $id = $id + 1;
+
+    if($content !== null) {
+      $pages[$id][1] = $content;
+    }
+
+    writeCSV($filePath, $pages);
   }
 
-  function createOverview($content) {
-    writeTXT("../../data/overview.txt", $content);
+  function deletePage($id) {
+    $pages = readCSV("../../data/pages.csv");
+    
+    array_splice($pages, $id + 1, 1);
+    writeCSV("../../data/pages.csv", $pages);
   }
 
-  function updateMissionStatement($statement) {
-    $filePath = '../../data/missionstatement.txt';
+  function createPage($filename, $content) {
+    $pages = readCSV("../../data/pages.csv");
+    $page = [$filename, $content];
+    
+    array_push($pages, $page);
 
-    writeTXT($filePath, $statement);
-  }
-
-  function updateOverview($overview) {
-    $filePath = '../../data/overview.txt';
-
-    writeTXT($filePath, $overview);
-  }
-
-  function deleteMission() {
-    writeTXT("../../data/missionstatement.txt", "");
-  } 
-
-  function deleteOverview() {
-    writeTXT("../../data/overview.txt", "");
+    writeCSV("../../data/pages.csv", $pages);
   }
 ?>

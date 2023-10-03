@@ -7,15 +7,9 @@
     $delete = $_POST['delete'];
 
     if($delete === '1') {
-      if($id == 'Mission') {
-        deleteMission();
-        header('Location: index.php');
-        exit();
-      } else {
-        deleteOverview();
-        header('Location: index.php');
-        exit();
-      }
+      deletePage($id);
+      header('Location: index.php');
+      exit();
     } else {
       header('Location: detail.php?id='.$id);
       exit();

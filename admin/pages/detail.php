@@ -2,24 +2,24 @@
   require_once('pages.php');
 
   $id = $_GET['id'];
-  $content;
-
-  if($id == 'Mission') {
-    $content = getMissionStatement();
-  } else {
-    $content = getOverview();
-  }
+  $pages = getAllPages("../../data/pages.csv");
+  $header = array_shift($pages);
+  $page = $pages[$id];
 ?>
 <html lang="en">
 <head>
-  <title>Detail</title>
+  <title>Page Details</title>
 </head>
 <body>
-  <h1><?= $id ?> Details.</h1>
-  <textarea name="content" rows="8"><?= $content; ?></textarea><br />
-  <a href="edit.php?id=<?= $id; ?>">Edit</a><br />
-  <a href="delete.php?id=<?= $id; ?>">Delete</a><br />
-
-  <a href="index.php"><- Back</a>
+  <h1>Filename</h1>
+  <?= $page[0] ?>
+  <h2>Actions</h2>
+  <a href="edit.php?id=<?= $id ?>">Edit</a><br />
+  <a href="delete.php?id=<?= $id ?>">Delete</a><br />
+  <a href="index.php"><- list</a>
+  <h1>Page Preview</h1>
+  <div style='border: 1px solid black;'>
+    <?= $page[1] ?>
+  </div>
 </body>
 </html>

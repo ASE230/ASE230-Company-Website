@@ -2,26 +2,17 @@
   require_once('pages.php');
 
   $id = $_GET['id'];
-  $content;
-
-  if($id == 'Mission') {
-    $content = getMissionStatement();
-  } else {
-    $content = getOverview();
-  }
+  $pages = getAllPages("../../data/pages.csv");
+  $header = array_shift($pages);
+  $page = $pages[$id];
 
   if($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $_content = $_POST['_content'];
+    $content = $_POST['content'];
 
-    if($id == 'Mission') {
-      updateMissionStatement($_content);
-      header('Location: detail.php?id='.$id);
-      exit();
-    } else {
-      updateOverview($_content);
-      header('Location: detail.php?id='.$id);
-      exit();
-    }
+    updatePage($id, $content);
+
+    header('Location: detail.php?id='.$id);
+    exit();
   }
 ?>
 
@@ -30,10 +21,11 @@
   <title>Edit Details</title>
 </head>
 <body>
-  <form method="POST" action="edit.php?id=<?= $id ?>">
-    <textarea name="_content" cols="96" rows="4"><?= $content ?></textarea><br />
-    <button type="submit">Save</button>
-    <a href="detail.php?id=<?= $id ?>">Cancel</a>
+<form method="POST" action="edit.php?id=<?= $id ?>">
+  <label>Page Content</label><br />
+  <textarea name="content" cols="96" rows="4"><?= $page[1] ?></textarea><br />
+  <button type="submit">Save</button>
+  <a href="detail.php?id=<?= $id ?>">Cancel</a>
   </form>
 </body>
 </html>
