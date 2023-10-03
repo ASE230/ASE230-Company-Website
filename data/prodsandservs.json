@@ -30,13 +30,5 @@
             "Children's Series": "Tailored courses introducing children to nature conservation, renewable energy, and the importance of biodiversity.",
             "Global Webinars": "Regular online sessions featuring guest experts in fields like permaculture, green architecture, and sustainable transportation. These webinars foster a community of eco-enthusiasts and offer the latest in green innovations."
         }
-    },
-    "Test": {
-        "Description": "Test",
-        "Applications": {
-            "Test1": "test1",
-            "test2": "test2",
-            "test3": "test3"
-        }
     }
 }
