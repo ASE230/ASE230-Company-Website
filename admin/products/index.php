@@ -12,6 +12,7 @@
     <title>Products</title>
 </head>
 <body>
+    <a href="create.php">Create Product</a>
     <table>
         <thead>
             <tr>
