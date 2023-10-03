@@ -1,6 +1,7 @@
 <?php
   require_once('products.php');
 
+  $name = 'GreenRoof™';
   $jsonFilePath = '../../data/prodsandservs.json';
   $counter = 1;
 
@@ -25,7 +26,7 @@
         )
     );
 
-    editProduct($jsonFilePath, $name, $productName, $productData);
+    createProduct($jsonFilePath, $productName, $productData);
 
     header('Location: detail.php?name='.$productName);
     exit();
@@ -39,15 +40,15 @@
 <body>
   <form method="POST" action="create.php">
     <label>Name</label>
-    <input type="text" name="productName" value="<?= $name ?>" /> <br />
+    <input type="text" name="productName" value="" /> <br />
     <label>Description</label><br />
-    <textarea name="description" cols="96" rows="4"><?= getProduct($jsonFilePath, $name)['Description'] ?></textarea><br />
+    <textarea name="description" cols="96" rows="4"></textarea><br />
     <?php 
     foreach (getProduct($jsonFilePath, $name)['Applications'] as $application => $description) {
         echo '<label>Application' . $counter . '</label>';
-        echo '<input type="text" name="application' . $counter . '" value="' . $application . '" /> <br />';
+        echo '<input type="text" name="application' . $counter . '" value="" <br />';
         echo '<label>Application' . $counter . ' Description</label><br />';
-        echo '<textarea name="application' . $counter . 'Desc" cols="96" rows="4">' . $description . '</textarea><br />';
+        echo '<textarea name="application' . $counter . 'Desc" cols="96" rows="4"></textarea><br />';
         $counter++;
     }
     ?>
