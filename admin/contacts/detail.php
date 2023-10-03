@@ -7,11 +7,10 @@
     $counterCount = $_GET["counter"];
     $foundContact = null;
 
-    // Find the contact with the matching "Name" in the JSON data
     foreach ($contacts as $contact) {
         if ($contact["counter"] === $counterCount) {
             $foundContact = $contact;
-            break; // Exit the loop once the contact is found
+            break;
         }
     }
   }

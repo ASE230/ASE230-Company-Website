@@ -5,7 +5,6 @@
     require_once('products.php');
 
     $products = getAllProducts('../../data/prodsandservs.json');
-    $header = array_keys($products[array_key_first($products)]);
 ?>
 
 <html lang="en">
