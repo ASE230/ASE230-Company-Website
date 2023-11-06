@@ -1,11 +1,12 @@
 <?php
   require_once('pages.php');
+  $pages_class = new pages("../../data/pages.csv");
 
   if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $filename = $_POST['filename'];
     $content = $_POST['content'];
 
-    createPage($filename, $content);
+    $pages_class->create_page($filename, $content);
 
     header('Location: index.php');
     exit();

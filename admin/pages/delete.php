@@ -2,12 +2,13 @@
   require_once('pages.php');
 
   $id = $_GET['id'];
+  $pages_class = new pages("../../data/pages.csv");
 
   if($_POST) {
     $delete = $_POST['delete'];
 
     if($delete === '1') {
-      deletePage($id);
+      $pages_class->delete_page($id);
       header('Location: index.php');
       exit();
     } else {

@@ -2,7 +2,8 @@
   require_once('pages.php');
 
   $id = $_GET['id'];
-  $pages = getAllPages("../../data/pages.csv");
+  $pages_class = new pages("../../data/pages.csv");
+  $pages = $pages_class->get_all_pages();
   $header = array_shift($pages);
   $page = $pages[$id];
 ?>
