@@ -1,10 +1,7 @@
 <?php
 
 require_once('../../lib/json.php');
-
-function getAllContacts($filePath) {
-    return readJSON($filePath);
-}
+require_once('../../lib/jsonhelper.php');
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Retrieve the POST data
@@ -16,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         "counter" => $_POST["counter"]
     );
 
-    writeJSON('../../data/contacts.json', $postData);
+    JSONHelper::createRecord($postData);
 
 } else {
 }

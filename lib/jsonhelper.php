@@ -1,6 +1,6 @@
 <?php
 class JSONHelper {
-    private static $file = 'data.json';
+    private static $file = '../../data/contacts.json';
 
     public static function readData() {
         if (file_exists(self::$file)) {
