@@ -2,7 +2,7 @@
 
 require_once('contacts.php');
 
-$contacts = getAllContacts('../../data/contacts.json');
+$contacts = JSONHelper::readData();
 
 ?>
 
