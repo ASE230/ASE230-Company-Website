@@ -4,7 +4,8 @@
   error_reporting(E_ALL);
   require_once('awards.php');
 
-  $awards = getAllAwards("../../data/awards.csv");
+  $awards_class = new awards("../../data/awards.csv");
+  $awards = $awards_class->get_all_awards();
   $header = array_shift($awards);
 ?>
 

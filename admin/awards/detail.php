@@ -3,7 +3,10 @@
 
   $id = $_GET['id'];
 
-  $awards = getAllAwards("../../data/awards.csv");
+  $awards_class = new awards("../../data/awards.csv");
+  $awards = null;
+  $awards = $awards_class->get_all_awards();
+
   $header = array_shift($awards);
   $award = $awards[$id];
 ?>

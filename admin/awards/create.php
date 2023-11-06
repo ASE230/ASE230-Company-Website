@@ -1,11 +1,13 @@
 <?php
   require_once('awards.php');
 
+  $awards_class = new awards("../../data/awards.csv");
+
   if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $year = $_POST['year'];
     $description = $_POST['description'];
 
-    createAward($year, $description);
+    $awards_class->create_award($year, $description);
 
     header('Location: index.php');
     exit();

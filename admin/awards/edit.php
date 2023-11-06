@@ -3,7 +3,8 @@
 
   $id = $_GET['id'];
 
-  $awards = getAllAwards("../../data/awards.csv");
+  $awards_class = new awards("../../data/awards.csv");
+  $awards = $awards_class->get_all_awards();
   $header = array_shift($awards);
   $award = $awards[$id];
 
@@ -11,7 +12,7 @@
     $year = $_POST['year'];
     $description = $_POST['description'];
 
-    updateAward($id, $year, $description);
+    $awards_class->update_award($id, $year, $description);
 
     header('Location: detail.php?id='.$id);
     exit();

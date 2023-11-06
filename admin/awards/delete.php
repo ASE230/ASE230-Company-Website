@@ -2,11 +2,13 @@
   require_once('awards.php');
   $id = $_GET['id'];
 
+  $awards_class = new awards("../../data/awards.csv");
+
   if($_POST) {
     $delete = $_POST['delete'];
 
     if($delete === '1') {
-      deleteAward($id);
+      $awards_class->delete_award($id);
       header('Location: index.php');
       exit();
     } else {

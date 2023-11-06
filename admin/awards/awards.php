@@ -5,51 +5,57 @@
 
   require_once('../../lib/csv.php');
 
-  function getAllAwards($filePath) {
-    return readCSV($filePath);
-  }
+  class awards {
+    private $filepath;
 
-  function getAward($filePath, $id) {
-    $allAwards = readCSV($filePath);
-
-    if($id >= 0 && $id < count($allAwards)) {
-      return $allAwards[$id];
+    private function __construct($filepath) {
+      $this -> filepath = $filepath;
     }
 
-    return null;
-  }
-
-  function updateAward($id, $year, $description) {
-    $filePath = "../../data/awards.csv";
-    $awards = readCSV($filePath);
-
-    $id = $id + 1;
-
-    if($year !== null) {
-      $awards[$id][0] = $year;
+    public function get_all_awards() {
+      return readCSV($this -> filepath);
     }
 
-    if($description !== null) {
-      $awards[$id][1] = $description;
+    public function get_award($id) {
+      $all_awards = readCSV($this -> filepath);
+  
+      if($id >= 0 && $id < count($all_awards)) {
+        return $all_awards[$id];
+      }
+  
+      return null;
     }
 
-    writeCSV($filePath, $awards);
+    public function update_award($id, $year, $description) {
+      $awards = readCSV($this -> filepath);
+  
+      $id = $id + 1;
+  
+      if($year !== null) {
+        $awards[$id][0] = $year;
+      }
+  
+      if($description !== null) {
+        $awards[$id][1] = $description;
+      }
+  
+      writeCSV($this -> filepath, $awards);
+    }
+
+    public function create_award($year, $description) {
+      $awards = readCSV($this -> filepath);
+      $award = [$year, $description];
+      
+      array_push($awards, $award);
+  
+      writeCSV($this -> filepath, $awards);
+    }
+  
+    public function delete_award($id) {
+      $awards = readCSV($this -> filepath);
+      
+      array_splice($awards, $id + 1, 1);
+      writeCSV($this -> filepath, $awards);
+    }
   }
-
-  function createAward($year, $description) {
-    $awards = readCSV("../../data/awards.csv");
-    $award = [$year, $description];
-    
-    array_push($awards, $award);
-
-    writeCSV("../../data/awards.csv", $awards);
-  }
-
-  function deleteAward($id) {
-    $awards = readCSV("../../data/awards.csv");
-    
-    array_splice($awards, $id + 1, 1);
-    writeCSV("../../data/awards.csv", $awards);
-  }
-
 ?>
